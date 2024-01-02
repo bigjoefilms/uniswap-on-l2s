@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from millify import millify
 from streamlit_extras.colored_header import colored_header
+from urllib.request import Request, urlopen
 
 # st.cache_data.clear()
 
@@ -62,26 +63,34 @@ st.markdown(text_3, unsafe_allow_html=True)
 url7 = "https://flipsidecrypto.xyz/edit/queries/6349f677-143b-4774-94d2-c0704633f365"
 @st.cache_data
 def load_df7():
-    df7 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url7.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url7.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df7 = pd.read_json(response.decode('utf-8'))
     return df7
 
 url8 = "https://flipsidecrypto.xyz/edit/queries/67409c8d-a5dd-4b4d-b611-710ef891281b"
 @st.cache_data
 def load_df8():
-    df8 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url8.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url8.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df8 = pd.read_json(response.decode('utf-8'))
     return df8
 
 url22 = "https://flipsidecrypto.xyz/edit/queries/95beab6d-99e4-4133-ae87-f3f000c46258"
 @st.cache_data
 def load_df22():
-    df22 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url22.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url22.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df22 = pd.read_json(response.decode('utf-8'))
     return df22
 
 ########################################################################################
 url27 = "https://flipsidecrypto.xyz/edit/queries/44323a13-da6a-4c55-b15e-c6821afd8ca1"
 @st.cache_data
 def load_df27():
-    df27 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url27.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url27.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df27 = pd.read_json(response.decode('utf-8'))
     return df27
 
 df27 = load_df27()
