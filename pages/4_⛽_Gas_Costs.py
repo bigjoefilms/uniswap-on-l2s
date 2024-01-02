@@ -5,8 +5,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from millify import millify
 from streamlit_extras.colored_header import colored_header
+from urllib.request import Request, urlopen
 
-# st.cache_data.clear()
+st.cache_data.clear()
 
 st.set_page_config(
     page_title="Uniswap On L2s",
@@ -45,7 +46,9 @@ div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
 url2 = "https://flipsidecrypto.xyz/edit/queries/585330c0-7820-4195-b1a2-faae610a4154"
 @st.cache_data
 def load_df2():
-    df2 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url2.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url2.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df2 = pd.read_json(response.decode('utf-8'))
     return df2
 
 df2 = load_df2()
@@ -60,7 +63,9 @@ df2_fig1.update_layout(title='Average Gas Cost (USD) on Uniswap',
 url3 = "https://flipsidecrypto.xyz/edit/queries/37397424-4baf-487f-9437-40ef7db4f41d"
 @st.cache_data
 def load_df3():
-    df3 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url3.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url3.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df3 = pd.read_json(response.decode('utf-8'))
     return df3
 
 df3 = load_df3()
@@ -74,7 +79,9 @@ df3_fig1.update_layout(title='Average Gas Cost (USD) of Swapping $1 on Uniswap',
 url24 = "https://flipsidecrypto.xyz/edit/queries/531ec317-6c5d-4556-b4c7-d8c7daa46143"
 @st.cache_data
 def load_df24():
-    df24 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url24.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url24.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df24 = pd.read_json(response.decode('utf-8'))
     return df24
 
 df24 = load_df24()
