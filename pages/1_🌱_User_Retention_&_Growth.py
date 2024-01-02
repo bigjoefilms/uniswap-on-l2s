@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from millify import millify
 from streamlit_extras.colored_header import colored_header
+from urllib.request import Request, urlopen
 
 st.cache_data.clear()
 
