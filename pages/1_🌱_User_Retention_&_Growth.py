@@ -204,7 +204,9 @@ df26_fig1.update_layout(hovermode="x unified")
 url22 = "https://flipsidecrypto.xyz/edit/queries/95beab6d-99e4-4133-ae87-f3f000c46258"
 @st.cache_data
 def load_df22():
-    df22 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url22.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url22.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df22 = pd.read_json(response.decode('utf-8'))
     return df22
 
 df22 = load_df22()
