@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 from millify import millify
 from streamlit_extras.colored_header import colored_header
 
-# st.cache_data.clear()
+st.cache_data.clear()
 
 st.set_page_config(
     page_title="Uniswap On L2s",
@@ -51,37 +51,49 @@ st.info("This page delves into user trading patterns on Uniswap across Layer 2s,
 url4 = "https://flipsidecrypto.xyz/edit/queries/d66c80a7-ce8f-419e-ad7d-9319c543f30a"
 @st.cache_data
 def load_df4():
-    df4 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url4.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url4.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df4 = pd.read_json(response.decode('utf-8'))
     return df4
 
 url5 = "https://flipsidecrypto.xyz/edit/queries/ada13e9c-7e25-4618-9f24-9e27c6b09c1a"
 @st.cache_data
 def load_df5():
-    df5 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url5.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url5.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df5 = pd.read_json(response.decode('utf-8'))
     return df5
 
 url10 = "https://flipsidecrypto.xyz/edit/queries/29687135-0e8f-47af-a84b-2b148fee1db9"
 @st.cache_data
 def load_df10():
-    df10 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url10.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url10.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df10 = pd.read_json(response.decode('utf-8'))
     return df10
 
 url9 = "https://flipsidecrypto.xyz/edit/queries/8e4b199c-1f8e-42be-bbfb-3829be128ede"
 @st.cache_data
 def load_df9():
-    df9 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url9.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url9.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df9 = pd.read_json(response.decode('utf-8'))
     return df9
 
 url21 = "https://flipsidecrypto.xyz/edit/queries/c61e84bf-7ef2-49bf-b5fe-4211c3d19777"
 @st.cache_data
 def load_df21():
-    df21 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url21.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url21.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df21 = pd.read_json(response.decode('utf-8'))
     return df21
 
 url23 = "https://flipsidecrypto.xyz/edit/queries/c3097631-5447-419e-97b6-577886c02600"
 @st.cache_data
 def load_df23():
-    df23 = pd.read_json(f"https://api.flipsidecrypto.com/api/v2/queries/{url23.split('/')[-1]}/data/latest")
+    req = Request(f"https://api.flipsidecrypto.com/api/v2/queries/{url23.split('/')[-1]}/data/latest", headers={"User-Agent": "Mozilla/5.0"})
+    response = urlopen(req).read()
+    df23 = pd.read_json(response.decode('utf-8'))
     return df23
 
 ############################### load datasets ###########################################
