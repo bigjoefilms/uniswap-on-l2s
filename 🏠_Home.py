@@ -45,9 +45,9 @@ div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
 
 text_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 20px;">Back in November 2018, Uniswap introduced its V1 contract on the Ethereum mainnet, setting the stage for a new kind of decentralized exchange. Fast forward five years, and Uniswap has been on quite a journey, constantly evolving with each new version. But it\'s not just Ethereum—it has spread its wings to different blockchains, attracting more users and becoming a hub for trading.</p>'
 
-text_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 20px;">In this dashboard, we\'ll take a closer look at how people are utilizing Uniswap across various L2 chains — Arbitrum, Avalanche, Base, BSC, Optimism, and Polygon. We\'ll unravel the details and common trends that define Uniswap\'s functionality within these scaling environments.</p>'
+text_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 20px;">In this dashboard, we\'ll take a closer look at how people are utilizing Uniswap across various Layer 2 chains — Arbitrum, Avalanche, Base, BSC, Optimism, and Polygon. While some of these chains may technically be categorized as sidechains rather than strictly L2, for the sake of clarity, we choose to include them under the broader umbrella term of L2. We\'ll unravel the details and common trends that define Uniswap\'s functionality within these scaling environments.</p>'
 
-text_3 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 20px;">Only <code>Uniswap V3</code> for the 6 L2s above are considered for this analysis. The data used for this dashboard is <a href="https://flipsidecrypto.xyz/">Flipside Crypto’s</a>. You can click on the <b>View SQL</b> button under each chart to view the underlying SQL query.</p>'
+text_3 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 20px;">The data used for this dashboard is <a href="https://flipsidecrypto.xyz/">Flipside Crypto’s</a>. You can click on the <b>View SQL</b> button under each chart to view the underlying SQL query.</p>'
 
 # st.info("Use the menu on the left to select a page (click on > if closed).", icon="👈")
 st.markdown(f'<h1 style="color:#434346;font-size:60px;text-align:center;">{"Uniswap On L2s"}</h1>', unsafe_allow_html=True)
