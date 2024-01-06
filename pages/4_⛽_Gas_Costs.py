@@ -7,7 +7,7 @@ from millify import millify
 from streamlit_extras.colored_header import colored_header
 from urllib.request import Request, urlopen
 
-# st.cache_data.clear()
+st.cache_data.clear()
 
 st.set_page_config(
     page_title="Uniswap On L2s",
