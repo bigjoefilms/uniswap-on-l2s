@@ -246,7 +246,7 @@ colored_header(
     color_name="gray-70",
 )
 
-insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Polygon boasts the highest number of listed tokens among Layer 2s, totaling an impressive 7571, a statistic aligned with its leading position in terms of active pools per week. Arbitrum follows closely with 5084 listed tokens. It\'s noteworthy, however, that only a fraction of these listed tokens are actively swapped. Notably, there has been a recent surge in token listings on Optimism and Base in recent weeks.</p>'
+insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Polygon boasts the highest number of listed tokens among Layer 2s, totaling an impressive 8605, a statistic aligned with its leading position in terms of active pools per week. Arbitrum follows closely with 5562 listed tokens. It\'s noteworthy, however, that only a fraction of these listed tokens are actively swapped.</p>'
 st.markdown(insight_1, unsafe_allow_html=True)
 
 
