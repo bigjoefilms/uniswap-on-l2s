@@ -454,7 +454,7 @@ colored_header(
     color_name="gray-70",
 )
 
-insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Thursdays, between 13:00 UTC and 17:00 UTC has been the most active time period by swap volume in the last 30 days across all 6 L2s.</p>'
+insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Over the past 30 days, Wednesdays from 12:00 UTC to 15:00 UTC have consistently emerged as the most active time period for swap volume across all Layer 2 solutions. Only Optimism stands out with Tuesdays at 21:00 UTC being its peak time for swap volume.</p>'
 st.markdown(insight_2, unsafe_allow_html=True)
 
 colored_header(
