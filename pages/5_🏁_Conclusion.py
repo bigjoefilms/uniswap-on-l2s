@@ -44,9 +44,13 @@ st.markdown(f'<h1 style="color:#434346;font-size:60px;text-align:center;">{"Conc
 st.info("This page encapsulates the essential takeaways from our exploration, providing a holistic understanding of the state of Uniswap on L2s.", icon="ℹ️")
 
 
-insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">As we conclude our examination of Uniswap\'s presence on Layer 2s, certain patterns come into focus. Token swap dynamics reveal a consistent preference for WETH and USDC, with variations on Avalanche and BSC. Arbitrum and Polygon emerge as key players, with Arbitrum particularly standing out in terms of user activity and swap volume, particularly among larger retail traders.</p>'
+insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">As we conclude our examination of Uniswap\'s presence on L2s, certain patterns come into focus. Arbitrum emerges as a dominant force, commanding a significant share of both users and total swap volume, underscoring its appeal for active and high-value trading. Polygon\'s gas fee efficiency and expansive token listings position it as a noteworthy contender, showcasing the importance of cost considerations in user preferences.</p>'
 st.markdown(insight_1, unsafe_allow_html=True)
 
 
-insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Optimism, while not commanding the highest volumes, showcases resilience and engagement, notably during airdrop events. Meanwhile, Avalanche and BSC grapple with retention challenges, prompting a closer look at how Uniswap can strengthen its foothold on these two L2s.</p>'
+insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">The influence of airdrop events on user engagement, as exemplified by Optimism\'s case, highlights the potential impact of strategic initiatives on Uniswap\'s adoption. The consistent preference for WETH and USDC in token swaps, reflects the enduring dominance of certain tokens within the Uniswap ecosystem.</p>'
 st.markdown(insight_2, unsafe_allow_html=True)
+
+
+insight_3 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">As Uniswap continues to evolve and adapt to different L2s, understanding these nuanced patterns and user behaviors becomes crucial. Strategies to enhance retention on chains with lower engagement, such as Avalanche and BSC, could further strengthen Uniswap\'s position in the broader DEX landscape.</p>'
+st.markdown(insight_3, unsafe_allow_html=True)
