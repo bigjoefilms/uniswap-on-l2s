@@ -115,11 +115,10 @@ colored_header(
     color_name="gray-70",
 )
 
-insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">The weekly average gas fee has generally trended downward, but recent weeks indicate a slight uptick, particularly on Optimism. This trend is noteworthy, especially when considering the gas fee in USD rather than the native token. The recent surge in Ethereum and other cryptocurrency prices could potentially exacerbate this situation. While users may be paying the same fee on average in crypto tokens, the increase in the value of these tokens translates to a higher dollar cost.</p>'
+insight_1 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">The weekly average gas fee has generally trended downward, but there has been an uptick in gas fee since the end of 2023, particularly on Optimism and Avalanche. This trend is noteworthy, especially when considering the gas fee in USD rather than the native token. The recent surge in Ethereum and other cryptocurrency prices could potentially exacerbate this situation. While users may be paying the same fee on average in crypto tokens, the increase in the value of these tokens translates to a higher dollar cost. For Avalanche in particular, the recent surge in gas fee on December 18, 2023, can be attributed to a network congestion caused by <a href="https://cryptopotato.com/avalanche-network-gas-fees-surge-linked-to-trader-joe-founders-social-experiment/">$BEEG minting</a>.</p>'
 st.markdown(insight_1, unsafe_allow_html=True)
 
-
-insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Among Layer 2s, Polygon stands out as the most economical, boasting the lowest average gas cost and the lowest average gas cost for swapping $1. This cost efficiency likely contributes to Polygon\'s dominance, evident in its significantly higher number of active pools compared to other Layer 2 chains. On the flip side, Optimism emerges as the costliest with an average gas cost of $0.4, while Base takes the lead in the average gas cost of swapping $1, amounting to $0.0013.</p>'
+insight_2 = '<p style="font-family:sans-serif; color:#4d372c; font-size: 18px;">Among Layer 2s, Polygon stands out as the most economical, boasting the lowest average gas cost and the lowest average gas cost for swapping $1. This cost efficiency likely contributes to Polygon\'s dominance, evident in its significantly higher number of active pools compared to other L2s. On the flip side, Optimism and Avalanche emerge as the costliest chains with an average gas cost of $0.5.</p>'
 st.markdown(insight_2, unsafe_allow_html=True)
 
 colored_header(
